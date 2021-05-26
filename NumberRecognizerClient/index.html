@@ -1,0 +1,55 @@
+<html>
+<head>
+    <style>
+        canvas {
+            border:2px solid;
+        }
+        .draw {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        input {
+            margin-top: 10px;
+        }
+        .resp {
+            display: flex;
+            position: absolute;
+            height: 600px;
+            width: 400px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        h3 {
+            margin: 10px 10px 10px 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        p {
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+        #number {
+            color: orangered;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="respDiv" class="resp hidden">
+        <img src="Clippy.jpg" />
+        <h3>Det ser ut som att du f&#xF6;rs&#xF6;ker skriva siffran <span id="number"></span></h3>
+        <h3>Det &#xE4;r jag minst <span id="acc"></span> % s&#xE4;ker p&#xE5;!</h3>
+        <div id="moreAcc"></div>
+    </div>
+    <div class="draw">
+        <canvas id="can" width="224" height="224"></canvas>
+        <input type="button" value="Rensa" id="clr" size="23" onclick="erase()">
+    </div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
